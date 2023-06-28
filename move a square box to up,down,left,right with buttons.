@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>move</title>
+	</head>
+	<style>
+	#color{
+	position:absolute;
+	background-color:orange;
+	width:100px;
+	height:100px;
+	}
+	.eye1{
+	background-color:black;
+	width:20px;
+	height:20px;
+	margin-left:10px;
+	margin-top:10px;
+	}
+	.eye2{
+	background-color:black;
+	width:20px;
+	height:20px;
+	margin-left:60px;
+	margin-top:10px;
+	}
+	.mouth{
+	background-color:white;
+	width:50px;
+	height:20px;
+	
+	}
+	</style>
+	<body>
+	<div class="rat">
+	<button type="submit" value="top" name="top" id="top" onclick="up()">up</button>
+	<input type="submit" value="bottom" name="bottom" id="bottom" onclick="down()">
+	<input type="submit" value="left" name="left" id="left" onclick="left()">
+	<input type="submit" value="right" name="right" id="right" onclick="right()">
+	</div>
+	<div id="color">
+	<div class="eye1"></eye1>
+	<div class="eye2"></eye2>
+	<div class="mouth"></mouth>
+	</div>
+		<script>
+		var a=document.getElementById("color").offsetTop
+		var b=document.getElementById("color").offsetLeft
+		function up()
+		{
+		a=a-50;
+		document.getElementById("color").style.marginTop=(a)+"px";
+		}
+		function down()
+		{
+		a=a+50;
+		document.getElementById("color").style.marginTop=(a)+"px";
+		}
+		function left()
+		{
+		b=b-50;
+		document.getElementById("color").style.marginLeft=(b)+"px";
+		}
+		function right()
+		{
+		b=b+50;
+		document.getElementById("color").style.marginLeft=(b)+"px";
+		}
+		</script>
+	</body>
+</html>
