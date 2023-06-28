@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>uppercase</title>
+	</head>
+	<body>
+		<script>
+			var n=prompt("Enter a string");
+			console.log("================");
+			console.log("length");
+			console.log(n.length);
+			
+			console.log("================");
+			console.log("initial");
+			var s=n.charAt(0);
+			var ss=' ';
+			for(i=0;i<n.length;i++)
+			{
+			if(n.charAt(i)==' ')
+			s=s+n.charAt(i+1);
+			}
+			console.log(s);
+			var c=' ';
+			console.log("================");
+			console.log("slicing");
+			console.log(n.slice(5,10));
+			
+			console.log("================");
+			console.log("uppercase");
+			var up=n.toUpperCase();
+			console.log(up);
+			
+			console.log("================");
+			console.log("swap");
+			for(i=0;i<n.length;i++)
+			{
+			
+			if(n.charAt(i)==(n.charAt(i).toUpperCase()))
+			ss+=(n.charAt(i)).toLowerCase();
+			else
+			ss+=(n.charAt(i)).toUpperCase();
+			}
+			console.log(ss);
+		</script>
+	</body>
+</html>
