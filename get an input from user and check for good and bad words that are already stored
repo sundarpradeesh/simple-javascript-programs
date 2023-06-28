@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Pattern</title>
+	</head>
+	<body>
+		
+		<script>
+			let n=prompt("He is a _______ student and he can be a _______ model.\nFill in the blanks:");
+			var marks=0;var flag=0;var c=0;
+			const good_words=['good','bad','awesome','wonderful'];
+			const bad_words=['temper','worst','believe'];
+			while(flag!=3 && c!=2){
+			if(good_words.includes(n)){
+				marks++;
+				c++;
+			}
+			else if(bad_words.includes(n)){
+				marks--;c++;
+			}
+			else{
+				flag++;
+			}
+			if(c!=2)
+			n=prompt("He is a _______ student and he can be a _______ model.\nFill in the blanks:");
+		}
+		if(flag==3)
+			alert("You have failed in this test");
+		else
+			alert("Your mark is "+marks);
+		</script>
+	</body>
+</html>
