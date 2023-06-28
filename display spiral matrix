@@ -1,0 +1,52 @@
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let matrix = [ [1,2,3],[4,5,6],[7,8,9] ];
+            let rmn=0,rmx=matrix.length-1,cmn=0,cmx=matrix[0].length-1;
+            let ans="";
+            
+            while(rmn<=rmx && cmn <= cmx)
+            {
+                for(let j=cmn;j<=cmx;j++)
+                {
+                    ans=ans+matrix[rmn][j];
+                    ans=ans+" ->";
+                }
+                rmn+=1;
+                for(let j=rmn;j<=rmx;j++)
+                {
+                    ans=ans+matrix[j][cmx];
+                    ans=ans+" ->";
+                }
+                cmx-=1;
+                if(rmn<=rmx)
+                {
+                    for(let j=cmx;j>=cmn;j--)
+                {
+                    ans=ans+matrix[rmx][j];
+                    ans=ans+" ->";
+                }
+                rmx-=1;
+                }
+                if(cmn<=cmx)
+                {
+                    for(let j=rmx;j>=rmn;j--)
+                {
+                    ans=ans+matrix[j][cmn];
+                    ans=ans+" ->";
+                }
+                cmn+=1;
+                }
+                
+            }
+            
+            console.log(ans);
+            
+        </script>
+    </body>
+</html>
