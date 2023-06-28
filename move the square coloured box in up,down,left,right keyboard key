@@ -1,0 +1,38 @@
+<html
+<body>
+    <div id="blk"></div>
+    <script>
+document.onkeydown = detectKey;
+
+function detectKey(e) {
+
+    var posLeft = document.getElementById('blk').offsetLeft;
+    var posTop = document.getElementById('blk').offsetTop;
+
+    e = e || window.event;
+
+    if (e.keyCode == '85') {
+        document.getElementById('blk').style.marginTop  = (posTop-58)+"px";
+    }
+    else if (e.keyCode == '68') {
+        document.getElementById('blk').style.marginTop  = (posTop+58)+"px";
+    }
+    else if (e.keyCode == '66') {
+        document.getElementById('blk').style.marginLeft  = (posLeft-58)+"px";
+    }
+    else if (e.keyCode == '70') {
+        document.getElementById('blk').style.marginLeft  = (posLeft+58)+"px";
+    }
+
+}
+    </script>
+    <style>
+#blk {
+  width: 100px;
+  height: 100px;
+  border: 5px;
+  background-color: rgb(157, 255, 0);
+}
+    </style>
+</body>
+</html>
