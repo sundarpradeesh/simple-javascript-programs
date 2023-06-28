@@ -1,0 +1,36 @@
+* * * * *
+  * * *
+    *
+  * * *
+* * * * *
+
+<html>
+	<head>
+		<title>Pattern</title>
+	</head>
+	<body>
+		<script>
+			let n=prompt("Enter the odd number:");
+			console.log(n);
+			var s='';var counter=0;
+			for(var i=n;i>0;i=i-2){
+				for(var j=i;j>0;j--){
+					s+='* ';
+				}
+				console.log(s);counter++;s="";
+				for(var j=0;j<counter;j++)
+					s+="  ";
+			}
+			s="";
+			for(var i=3;i<=n;i=i+2){
+				counter--;s="";
+				for(var j=0;j<counter-1;j++)
+					s+="  ";
+				for(var j=1;j<=i;j++){
+					s+='* ';
+				}
+				console.log(s);
+			}
+		</script>
+	</body>
+</html>
